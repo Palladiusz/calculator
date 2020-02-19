@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffbd69;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+    font-size: 1.5rem;
+}
+
+input {
+  border:none;
+}
+
+.screen {
+    color: white;
+    font-size: 2.5rem;
+    grid-area: screen;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.counting {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.screen input {
+    background-color: #381460;
+    color: white;
+    font-size: 2.5rem;
+    display: flex;
+    text-align: end;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.current-operand {
+    
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.num {
+    background-color: #b21f66;
+}
+
+.operator {
+    background-color: #fe346e;
+}
+
+.ac {
+    background-color: crimson;
+    grid-area: ac;
+}
+.c {
+    background-color: crimson;
+    grid-area: c;
+}
+
+.zero {
+    grid-area: zero;
+    border-radius: 0 0 0 20px;
+}
+
+.equal {
+    background-color: rgba(255, 0, 0, 0.596);
+    grid-area: equal;
+    border-radius: 0 0 20px 0;
+}
+
+.container {
+    background-color: #381460;
+    padding: 15px;
+    margin-top: 10%;
+    border-radius: 20px;
+    box-shadow: 6px 7px 15px 0px rgba(0,0,0,0.75);
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: repeat(6, 100px);
+    grid-template-areas: 
+    "screen screen screen screen"
+    "ac c divide multiple"
+    "seven eigth nine minus"
+    "four five six plus"
+    "one two three equal"
+    "zero zero dot equal";
+    gap: 3px;
+}
+
+.btn:active {
+    box-shadow: inset 3px 3px 8px 1px rgba(0,0,0,0.75);
+}
